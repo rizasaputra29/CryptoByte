@@ -224,10 +224,10 @@ export default function HomePage() {
       {/* Header */}
       <div className="space-y-3 text-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-black tracking-tight">
-          Implementasi Algoritma Kriptografi Klasik
+          What Is Crypto<span className="font-doto">Byte</span>?
         </h1>
         <p className="mx-auto max-w-2xl text-neutral-500">
-          Kalkulator enkripsi dan dekripsi berbasis web untuk algoritma kriptografi klasik.
+          Crypto<span className="font-doto font-bold">Byte</span> is a web-based calculator for classic cryptography algorithms.
         </p>
       </div>
 

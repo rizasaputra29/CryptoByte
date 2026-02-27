@@ -14,12 +14,12 @@ export default function DocumentationPage() {
   return (
     <PageTransition className="pt-16 md:pt-20 pb-12">
       {/* Header */}
-      <div className="mb-12 max-w-3xl">
+      <div className="mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold font-sans text-black mb-4">
           Dokumentasi
         </h1>
         <p className="text-neutral-500 text-lg">
-          Teori, rumus, dan contoh manual untuk setiap algoritma kriptografi klasik yang diimplementasikan pada CryptoByte.
+          Teori, rumus, dan contoh manual untuk setiap algoritma kriptografi klasik yang diimplementasikan pada Crypto<span className="font-doto font-bold">Byte</span>.
         </p>
       </div>
 
