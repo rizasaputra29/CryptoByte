@@ -1,0 +1,18 @@
+generator client {
+    provider = "prisma-client"
+    output   = "../generated/prisma"
+}
+
+datasource db {
+    provider = "postgresql"
+}
+
+model EncryptionHistory {
+    id         String   @id @default(cuid())
+    algorithm  String
+    operation  String
+    plaintext  String
+    ciphertext String
+    keyUsed    String
+    createdAt  DateTime @default(now())
+}
