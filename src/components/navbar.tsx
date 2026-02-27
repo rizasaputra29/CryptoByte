@@ -39,7 +39,7 @@ export function Navbar() {
           >
             <Link href="/">
               <span className="font-sans text-2xl font-semibold tracking-tight text-black">
-                CryptoByte
+                Crypto<span className="font-doto">Byte</span>
               </span>
             </Link>
             <button
@@ -67,7 +67,7 @@ export function Navbar() {
             <div className="pointer-events-auto bg-white/80 backdrop-blur-xl border border-neutral-200/50 px-4 py-2.5 rounded-full shadow-lg flex items-center gap-4">
               <Link href="/">
                 <span className="font-sans text-lg font-semibold tracking-tight text-black">
-                  CryptoByte
+                  Crypto<span className="font-doto">Byte</span>
                 </span>
               </Link>
               <div className="w-px h-5 bg-neutral-300"></div>
@@ -95,7 +95,7 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
           >
             <Link href="/" className="font-sans text-2xl font-semibold tracking-tight text-black">
-              CryptoByte
+              Crypto<span className="font-doto">Byte</span>
             </Link>
             <Link
               href="/documentation"
@@ -124,7 +124,7 @@ export function Navbar() {
           >
             <nav className="pointer-events-auto bg-neutral-100/80 backdrop-blur-xl border border-white/20 p-1.5 rounded-full shadow-sm flex items-center gap-1">
               <Link href="/" className="flex items-center gap-2 pl-4 pr-4">
-                <span className="font-semibold tracking-tight text-lg text-black">CryptoByte</span>
+                <div className="font-semibold tracking-tight text-lg text-black">Crypto<span className="font-doto">Byte</span></div>
               </Link>
 
               <div className="w-px h-4 bg-neutral-300 mx-2"></div>

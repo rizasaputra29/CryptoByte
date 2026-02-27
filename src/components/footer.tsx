@@ -4,7 +4,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-black">CryptoByte</span>
+            <span className="font-semibold text-black">Crypto<span className="font-doto">Byte</span></span>
             <span className="text-neutral-300">·</span>
             <span className="text-sm text-neutral-500">Kriptografi Klasik</span>
           </div>

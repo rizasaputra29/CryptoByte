@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Doto } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { SplashScreen } from "@/components/SplashScreen";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const doto = Doto({
+  variable: "--font-doto",
   subsets: ["latin"],
 });
 
@@ -28,8 +34,9 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white text-black antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${doto.variable} min-h-screen bg-white text-black antialiased`}
       >
+        <SplashScreen />
         <Navbar />
         <main className="container mx-auto px-4 py-10">
           {children}

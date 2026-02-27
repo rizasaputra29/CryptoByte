@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { PageTransition } from "@/components/PageTransition";
 
 const SECTIONS = [
   { id: "vigenere", title: "1. Vigenere Cipher" },
@@ -11,7 +12,7 @@ const SECTIONS = [
 
 export default function DocumentationPage() {
   return (
-    <div className="pt-16 md:pt-20 pb-12">
+    <PageTransition className="pt-16 md:pt-20 pb-12">
       {/* Header */}
       <div className="mb-12 max-w-3xl">
         <h1 className="text-3xl sm:text-4xl font-bold font-sans text-black mb-4">
@@ -142,7 +143,7 @@ export default function DocumentationPage() {
               <h3>Teori</h3>
               <p>
                 Playfair Cipher mengenkripsi pasangan huruf (digraph) menggunakan matriks kunci 5×5.
-                Huruf <strong>J</strong> digabungkan dengan <strong>I</strong>. Plaintext dipisahkan menjadi pasangan-pasangan, dan jika
+                Huruf <strong>J</strong> gabungkan dengan <strong>I</strong>. Plaintext dipisahkan menjadi pasangan-pasangan, dan jika
                 dua huruf yang sama berdampingan, huruf <strong>X</strong> disisipkan sebagai pemisah.
               </p>
 
@@ -254,6 +255,6 @@ export default function DocumentationPage() {
           </article>
         </div>
       </div>
-    </div>
+    </PageTransition>
   );
 }

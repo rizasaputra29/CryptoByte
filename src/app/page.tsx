@@ -22,6 +22,7 @@ import * as affine from "@/lib/algorithms/affine";
 import * as playfair from "@/lib/algorithms/playfair";
 import * as hill from "@/lib/algorithms/hill";
 import * as enigma from "@/lib/algorithms/enigma";
+import { PageTransition } from "@/components/PageTransition";
 
 type CipherType = "vigenere" | "affine" | "playfair" | "hill" | "enigma";
 
@@ -219,7 +220,7 @@ export default function HomePage() {
   const info = CIPHER_INFO[cipher];
 
   return (
-    <div className="space-y-8 pt-20 md:pt-20">
+    <PageTransition className="space-y-8 pt-20 md:pt-20">
       {/* Header */}
       <div className="space-y-3 text-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-black tracking-tight">
@@ -514,6 +515,6 @@ export default function HomePage() {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </PageTransition>
   );
 }
