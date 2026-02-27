@@ -14,7 +14,22 @@ const menuItems = [
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSplashDone, setIsSplashDone] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !!sessionStorage.getItem("hasSeenSplash");
+    }
+    return true;
+  });
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && !sessionStorage.getItem("hasSeenSplash")) {
+      const timer = setTimeout(() => {
+        setIsSplashDone(true);
+      }, 2600); // 2500ms splash duration + 100ms buffer
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +44,7 @@ export function Navbar() {
     <>
       {/* Mobile: Standard header */}
       <AnimatePresence>
-        {!isScrolled && (
+        {!isScrolled && isSplashDone && (
           <motion.header
             className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 md:hidden bg-white/80 backdrop-blur-md border-b border-black/5"
             initial={{ opacity: 0, y: -20 }}
@@ -56,7 +71,7 @@ export function Navbar() {
 
       {/* Mobile: Floating pill */}
       <AnimatePresence>
-        {isScrolled && (
+        {isScrolled && isSplashDone && (
           <motion.header
             className="fixed top-4 left-0 right-0 z-50 flex justify-center md:hidden pointer-events-none"
             initial={{ opacity: 0, y: -20, scale: 0.9 }}
@@ -86,7 +101,7 @@ export function Navbar() {
 
       {/* Desktop: Standard header */}
       <AnimatePresence>
-        {!isScrolled && (
+        {!isScrolled && isSplashDone && (
           <motion.header
             className="fixed top-0 left-0 right-0 z-40 hidden md:flex items-center justify-between px-12 md:px-24 lg:px-32 py-6 bg-white border-b border-black/5"
             initial={{ opacity: 0, y: -20 }}
@@ -114,7 +129,7 @@ export function Navbar() {
 
       {/* Desktop: Floating pill */}
       <AnimatePresence>
-        {isScrolled && (
+        {isScrolled && isSplashDone && (
           <motion.header
             className="fixed top-6 left-0 right-0 z-50 hidden md:flex justify-center pointer-events-none"
             initial={{ opacity: 0, y: -20 }}

@@ -39,8 +39,8 @@ export function SplashScreen() {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white"
         >
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex items-center">
+          <div className="flex flex-col items-center gap-4 px-4 text-center">
+            <div className="flex items-center justify-center flex-wrap">
               <DecryptedText
                 text="Welcome to Crypto"
                 animateOn="view"
@@ -48,8 +48,8 @@ export function SplashScreen() {
                 maxIterations={25}
                 sequential={true}
                 revealDirection="center"
-                className="text-4xl md:text-5xl font-bold tracking-tight text-black"
-                encryptedClassName="text-4xl md:text-5xl font-bold tracking-tight text-black"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black"
+                encryptedClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black"
               />
               <DecryptedText
                 text="Byte"
@@ -58,8 +58,8 @@ export function SplashScreen() {
                 maxIterations={25}
                 sequential={true}
                 revealDirection="center"
-                className="text-4xl md:text-5xl font-bold tracking-tight text-black font-doto"
-                encryptedClassName="text-4xl md:text-5xl font-bold tracking-tight text-black font-doto"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black font-doto"
+                encryptedClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black font-doto"
               />
             </div>
             <motion.div
